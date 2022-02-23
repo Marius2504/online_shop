@@ -1,0 +1,261 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    font-family:'Times New Roman', Times, serif;
+}
+.contact1{
+    position: relative;
+    min-height: 100vh;
+    padding: 0px 120px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    background-image: url("contact_img/back.jpg");
+    background-size: cover;
+}
+.contact1 .content{
+    max-width: 800px;
+    text-align: center;
+}
+.contact1 .content h2{
+    font-size: 36px;
+    font-weight: 500;
+    color:#fff;
+}
+.contact1 .content p{
+    font-weight: 300;
+    color:#fff;
+}
+.container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+}
+.container .contactInfo{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+.container .contactInfo .box{
+    position: relative;
+    padding: 20px 0;
+    display:flex;
+}
+.container .contactInfo .box .icon{
+    min-width: 60px;
+    height: 60px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    font-size: 22px;
+}
+.container .contactInfo .box .text{
+    display: flex;
+    margin-left: 20px;
+    font-size: 16px;
+    flex-direction: column;
+    font-weight: 300;
+}
+.container .contactInfo .box .text h3{
+    font-weight: 500;
+    color: #00bcd4;
+}
+.container .contactInfo .box .text p{
+    max-width: 300px;
+}
+.contactForm{
+    opacity: 0.6;
+    width: 40%;
+    padding: 40px;
+    background: #fff;
+    animation:op2 1s linear forwards;
+}
+.contactForm h2{
+    font-size: 30px;
+    color: #333;
+    font-weight: 500;
+}
+.contactForm .inputBox{
+    position: relative;
+    width: 100%;
+    margin-top: 10px; 
+}
+.contactForm .inputBox input,.contactForm .inputBox textarea{
+    width: 100%;
+    padding: 5px 0;
+    font-size: 16px;
+    margin:10px 0;
+    border:none;
+    border-bottom: 2px solid #333;
+    outline: none;
+    resize: none;
+}
+.contactForm .inputBox span{
+    position:absolute;
+    left: 0;
+    padding: 5px 0;
+    font-size: 16px;
+    margin:10px 0;
+    pointer-events: none;
+    transition: 0.5s;
+    color: #666;
+}
+.contactForm .inputBox input:focus~span,
+.contactForm .inputBox input:valid~span,
+.contactForm .inputBox textarea:focus~span,
+.contactForm .inputBox textarea:valid~span{
+    color: #e91e63;
+    font-size: 12px;
+    transform: translateY(-20px);
+}
+.input1 #av
+{
+    width: 100px;
+    background: #00bcd4;
+    color: #fff;
+    border:none;
+    cursor: pointer;
+    padding:10px;
+    font-size:18px ;
+}
+footer{
+    position: static;
+    height: 100px;
+    width: 100%;
+    background-color: rgb(39, 43, 41) ;
+  }
+
+@media (max-width:900px){
+
+    .contact1{
+        padding: 100px;
+    }
+    .container{
+        flex-direction: column;
+        justify-content: left;
+    }
+    .container .contactInfo{
+        margin-bottom:40px ;  
+        width: 100% ;
+    }
+    .container .contactForm{
+        width: 100%;
+    } 
+}
+.contactForm:hover{
+    animation:op 1s linear forwards;
+}
+@keyframes op {
+    0%{opacity: 0.6;}
+    100%{opacity: 1;}
+}
+@keyframes op2 {
+    0%{opacity: 1;}
+    100%{opacity: 0.6;}
+}
+
+
+
+
+/*
+
+@media screen and(max-width:900px) {
+    .contact1{
+        padding: 50px;
+        background-color: #e91e63;
+    }
+    .container{
+        flex-direction: column;
+    }
+    .container .contactInfo{
+        margin-bottom:40px ;
+    }
+    .container .contactInfo{
+        width: 100%;
+
+    } 
+    
+}
+main>h1
+{
+    position: absolute;
+    left: 200px;
+    top: 200px;
+    color: azure;
+}
+main>h2
+{
+    position: absolute;
+    left: 200px;
+    top: 230px;
+    color: azure;
+}
+#container
+{
+    margin: 100px;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    position: relative;
+    justify-content: space-between;
+}
+.descriere .scris
+{
+    width: 200px;
+    height: auto;
+    margin-left: 100px;
+}
+.descriere .scris h1{color: rgb(13, 46, 85); font-size: 23px;}
+.descriere .scris p{font-size: 20px;color: dimgrey;}
+.descriere .scris p span{color: darkred;}
+#containerM{width: 1200px;border-style: groove;height: 600px;left: 350px;position: relative;}
+
+
+
+body {background-color:rgb(192, 186, 118);
+    font-size:15px;
+    }
+footer{
+    height: 100px;
+    position: static;
+    width: 100%;
+    background-color: rgb(39, 43, 41) ;
+}
+.oo img{
+    width: 100%;
+    height: 100vh;
+    position: static;
+  }
+
+
+body>h1
+{
+    margin-top: 20vh;
+    margin-left: 20vw;
+    position: absolute;
+    color: azure;
+    font-size: 30px;
+    z-index: 3;
+}
+body>h2
+{
+    margin-left: 20vw;
+    margin-top: 24vh;
+    color: azure;
+    font-size: 15px;
+    position: absolute;
+    z-index: 3;
+}
+#container{
+    background-color: black;
+}
+
+
+*/

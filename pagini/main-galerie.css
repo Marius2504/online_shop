@@ -1,0 +1,243 @@
+body{background-color: rgb(26, 25, 25);}
+#container-animatie{
+  position: relative;
+  padding: 0px;
+  margin: 0px;
+  width: 100%;
+  
+  margin: auto;
+  overflow: hidden;
+  min-width: 0px;
+  z-index: 10;
+}
+
+#animata img{
+  width: 100vw;
+}
+#animata{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  animation-name: slide;
+  animation-duration: 12s;
+  animation-delay:0.5s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+
+@keyframes slide{
+  0%{margin-left:0vh;}
+  20%{margin-left:0vh;}
+
+  30%{margin-left: -100vw;}
+  50%{margin-left:-100vw;}
+
+  60%{margin-left:-200vw;}
+  80%{margin-left:-200vw;}
+
+  90%{margin-left:-300vw;}
+  100%{margin-left:-300vw;}
+
+}
+#descriere {
+  position: absolute;
+  padding-top: 10px;
+  padding-left: 10px;
+  background-color: black;
+  opacity: 20%;
+  top: 10vh;
+  bottom: 10vh;
+  left: 2vw;
+  right: 2vw;
+  border-radius: 3%; 
+  height: 60vh;  
+  z-index: 12;
+  
+}
+#descriere h1
+{
+  position: relative;
+  font-family:Arial, Helvetica, sans-serif;
+  color: white;
+}
+#descriere p{
+  
+  color: white;
+  font-family:Arial, Helvetica, sans-serif;
+  font-size: 20px;
+}
+
+.text{
+  position: absolute;
+  z-index: 20;
+  top:23vh;
+  left: 17vw;
+  color: white;
+  font-family: sans-serif;
+}
+.text h2{font-size: 3vw;}
+.text h1{
+  font-size: 7vw;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-shadow:0.05em 0 0 rgba(255, 0, 0, 0.75), 
+    -0.05em -0.025em 0 rgba(0, 255, 0, 0.75), 
+    -0.025em 0.05em 0 rgba(0, 0, 255, 0.75) ;
+  animation: glitch 2s infinite;
+}
+
+@keyframes glitch{
+  0%{text-shadow:0.05em 0 0 rgba(255, 0, 0, 0.75), 
+    -0.05em -0.025em 0 rgba(0, 255, 0, 0.75), 
+    -0.025em 0.05em 0 rgba(0, 0, 255, 0.75) ;
+  
+  }
+  14%{text-shadow:0.05em 0 0 rgba(255, 0, 0, 0.75), 
+    -0.05em -0.025em 0 rgba(0, 255, 0, 0.75), 
+    -0.025em 0.05em 0 rgba(0, 0, 255, 0.75) ;
+  }
+  15%{text-shadow:-0.05em -0.025em 0 rgba(255, 0, 0, 0.75), 
+    0.025em 0.025em 0 rgba(0, 255, 0, 0.75), 
+    -0.05em -0.05em 0 rgba(0, 0, 255, 0.75) ;
+  }
+  49%{text-shadow:-0.05em -0.025em 0 rgba(255, 0, 0, 0.75), 
+    0.025em 0.025em 0 rgba(0, 255, 0, 0.75), 
+    -0.05em -0.05em 0 rgba(0, 0, 255, 0.75) ;
+  }
+  50%{text-shadow:0.025em 0.05em 0 rgba(255, 0, 0, 0.75), 
+    0.05em 0 0 rgba(0, 255, 0, 0.75), 
+    0 -0.05em 0 rgba(0, 0, 255, 0.75) ;
+  }
+  99%{text-shadow:0.025em 0.05em 0 rgba(255, 0, 0, 0.75), 
+    0.05em 0 0 rgba(0, 255, 0, 0.75), 
+    0 -0.05em 0 rgba(0, 0, 255, 0.75) ;
+  }
+  100%{text-shadow:-0.025em 0 0 rgba(255, 0, 0, 0.75), 
+    -0.025em -0.025em 0 rgba(0, 255, 0, 0.75), 
+    -0.025em -0.05em 0 rgba(0, 0, 255, 0.75) ;
+  }
+}
+.text h1 span{
+  position: absolute;
+  z-index: 20;
+  top: 0;
+  left: 0;
+}
+.text h1 span:first-child{
+  animation: glitch 1s infinite;
+  
+  clip-path: polygon(0 0,100% 0,100% 40%,0 40%);
+  transform: translate(-0.05em,-0.025em);
+  opacity: 0.8;
+}
+.text h1 span:last-child{
+  animation: glitch 3.7s infinite;
+ 
+  clip-path: polygon(0 60%,100% 60%,100% 100%,0 100%);
+  transform: translate(0.0125em,0.025em);
+  color: darkviolet;
+  animation: neon 10s infinite linear;
+  opacity: 0.8;
+}
+@keyframes neon {
+  0%{color: darkviolet;}
+  1%{color: white;}
+  2%{color: darkviolet;}
+  7%{color: darkviolet;}
+  8%{color: white;}
+  10%{color: white;}
+  11%{color: darkviolet;}
+  30%{color: darkviolet;}
+  31%{color: white;}
+  100%{color: white;}
+}
+
+@media screen and (max-width:1400px){
+  .text{
+    top:17vh;
+  }
+  .login{
+    position: relative;
+    right: 20px;
+    display: flex;
+    flex-direction: column;
+    max-width: 130px;
+    width: 50%;
+  }
+  #loginbtn,#email,#parola{
+    width: 100%;
+    
+  }
+
+}
+@media screen and (min-width:1400px) {
+  .text h2{font-size: 40px;}
+  .text h1{font-size: 95px;}
+  
+}
+.video{
+  padding: 0;
+  margin: 0;
+  top:0px;
+  width: 100%;
+}
+
+/*
+
+
+
+
+
+@keyframes out{
+  0%{opacity: 50%;}
+  100%{opacity: 20%;}
+}
+animation-name: out;
+  animation-duration: 2s;
+ <div id="descriere">
+            <h1>Bine ati venit!</h1>
+            <br>
+            <p>La GSMRO vei gasi intotdeauna doar produse premium: telefoane mobile, tablete si accesorii GSM - 100% originale, cu garantia producatorilor.
+
+                Livram rapid, din stocul propriu, cele mai noi modele ale brandurilor de top, in toate variantele de culori existente.
+                
+                Fiecare client este un partener important: te ascultam, iti solutionam cerintele in mod personalizat si incercam sa-ti aducem mereu oferte exclusive, la preturi avantajoase.</p>
+        </div>
+
+        
+
+
+ 
+#animata
+{background-color: red;
+display: flex;
+flex-direction: row;
+flex-wrap: nowrap;
+position: absolute;
+
+animation-name: slide;
+animation-duration: 12s;
+animation-delay: 0.5s;
+animation-iteration-count: infinite;
+animation-direction: alternate;}
+#animata img{width: 100vw;}
+
+
+
+@keyframes slide{
+   0%{margin-left:0px;}
+   20%{margin-left:0px;}
+
+   30%{margin-left: -100vw;}
+   50%{margin-left:-100vw;}
+ 
+   60%{margin-left:-200vw;}
+   80%{margin-left:-200vw;}
+ 
+   90%{margin-left:-300vw;}
+   100%{margin-left:-300vw;}
+
+}
+ */
+

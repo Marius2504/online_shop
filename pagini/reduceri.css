@@ -1,0 +1,310 @@
+.hero{
+    width: 100%;
+    height: 100vh;
+    background-image: url(reduceri_img/2990.jpg);
+    background-size:cover;
+    background-position:center;
+    position: relative;
+    overflow: hidden;
+    margin-top:-80px;
+}
+.bubbles img{
+    width: 50px;
+    animation: bubble 2s linear infinite ;
+    z-index: 3;
+}
+.bubbles{
+    left: 20vw;
+    width: 100%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around;
+    position: absolute;
+    top: -270px;
+}
+@keyframes bubble{
+    0%{
+        transform: translateY(0);
+        transform: translateX(0);
+        opacity: 0;
+    }
+    50%{
+        
+        opacity: 1;
+    }
+    70%{
+        opacity: 1;
+    }
+    100%{
+        transform: translate(-100vh,100vh);
+        opacity: 0;
+    }
+}
+.bubbles img:nth-child(1)
+{
+    width: 25px;
+}
+.bubbles img:nth-child(2)
+{
+    animation-delay: 1.7s;
+    width: 70px;
+}
+.bubbles img:nth-child(3)
+{
+    animation-delay: 1.2s;
+    width: 25px;
+}
+.bubbles img:nth-child(4)
+{
+    animation-delay: 0.1s;
+}
+.bubbles img:nth-child(5)
+{
+    width: 60px;
+    animation-delay: 2.3s;
+}
+.bubbles img:nth-child(6)
+{
+    animation-delay: 1.3s;
+    width: 25px;
+}
+.bubbles img:nth-child(7)
+{
+    animation-delay: 1.7s;
+    width: 65px;
+}
+.bubbles img:nth-child(7)
+{
+    animation-delay: 1s;
+    width: 15px;
+}
+.bubbles img:nth-child(7)
+{
+    animation-delay: 3.5s;
+    width: 35px;
+}.bubbles img:nth-child(7)
+{
+    animation-delay: 2.5s;
+    width: 135px;
+}
+
+figure{
+    padding: 30px;
+    background-color: white;
+    display: inline-block;
+    margin: 10px;
+  }
+.container{
+  position: absolute;
+          top: 700px;
+          margin-left: 10vw;
+          
+          width: 30vw;
+          display: grid;
+}
+
+.container>figure:nth-child(1){
+    grid-area: Poza1;
+  }
+  .container>figure:nth-child(2){
+    grid-area: Poza2;
+  }
+  .container>figure:nth-child(3){
+    grid-area: Poza3;
+  }
+  .container>figure:nth-child(4){
+    grid-area: Poza4;
+  }
+  .container>figure:nth-child(5)
+  {
+    grid-area: Poza5;
+  }
+  .container>figure:nth-child(6)
+  {
+    grid-area: Poza6;
+  }
+  .container>figure:nth-child(7)
+{
+  grid-area: Poza7;
+}
+.container>figure:nth-child(8)
+{
+  grid-area: Poza8;
+}
+.container figure img
+{
+  width: 20vw;
+}
+.container>figure{
+  border-radius: 20px;
+    font-family: 'Times New Roman', Times, serif;
+    animation-name: aparitie;
+    animation-duration:3.5s;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+    animation-fill-mode: both;
+    border-style: solid;
+    border-color: rgb(99, 8, 8);
+    border-radius: 30px;
+  }
+  
+  .container>figure:nth-child(1),.container>figure:nth-child(6){
+    animation-delay:0.5s;
+  }
+  .container>figure:nth-child(2),.container>figure:nth-child(7){
+    animation-delay:1.0s;
+  }
+  .container>figure:nth-child(3),.container>figure:nth-child(8){
+    animation-delay:1.5s;
+  }
+  .container>figure:nth-child(4){
+    animation-delay:2.0s;
+  }
+  .container>figure:nth-child(5){
+    animation-delay:2.5s;
+  }
+  
+  @keyframes aparitie{
+    0%{opacity:0;}
+    100%{opacity:1;}
+   }
+   .oo{
+    overflow: hidden;
+    top:400px;
+    height: 3000px;
+  }
+  
+@media screen and (max-width:1400px) and (min-width:700px) {
+    .container{
+      grid-template-columns: auto auto auto ;
+      grid-template-areas:" Poza1 Poza2 Poza3" "Poza4 Poza5 Poza6" "Poza7 Poza8 Poza9";
+      row-gap: 80px;}
+      .container figure img
+      {
+        width: 17vw;
+      }
+    
+}
+@media screen and (min-width:1400px) {
+  .container{
+          grid-template-columns: auto auto auto auto;
+          grid-template-areas:" Poza1 Poza2 Poza3 Poza4" "Poza5 Poza6 Poza7 Poza8";
+          row-gap: 80px;
+    }
+    .container figure img
+      {
+        width: 15vw;
+      }
+    
+}
+@media screen and (max-width:700px) {
+  .container{
+    grid-template-columns: auto auto ;
+    grid-template-areas:" Poza1 Poza2" "Poza3 Poza4" "Poza5 Poza6" "Poza7 Poza8";
+    row-gap: 40px;}
+    
+}
+
+
+
+/*
+
+
+.container figure::before{
+      content: '';
+      position: absolute;
+      top: 2px;
+      left: 2px;
+      width: 0;
+      height: 0;
+      background: transparent;
+      border:2px solid transparent;
+   }
+   .container figure:hover:before{
+     animation: animate 1s linear forwards;
+   }
+   @keyframes animate{
+     0%
+     {
+       width: 0;
+       height: 0;
+       border-top-color: #fff;
+       border-right-color: transparent;
+       border-bottom-color:transparent;
+       border-left-color:transparent;
+     }
+     50%{
+        width: 100%;
+        height: 0;
+        border-top-color: #fff;
+        border-right-color:  #fff;
+        border-bottom-color:transparent;
+        border-left-color:transparent;
+     }
+     100%{
+      width: 100%;
+      height: 100%;
+      border-top-color: #fff;
+      border-right-color:  #fff;
+      border-bottom-color: transparent;
+      border-left-color:transparent;
+     }
+   }
+.container>figure:hover{
+    animation-name: borde;
+    animation-duration: 1.3s;
+    animation-iteration-count: infinite;
+    
+  }
+
+@keyframes borde{
+     0%{border-style:none;}
+     100%{border-style: solid;}
+   }
+
+
+
+    .container figure::after{
+    content: '';
+    position: absolute;
+    top:2px;
+    left: 2px;
+    width: 0;
+    height: 0;
+    background: transparent;
+    border:2px solid transparent;
+ }
+ .container figure::after{
+   animation: animate2 1s linear forwards;
+   animation-delay: 1s;
+ }
+ @keyframes animate2{
+   0%
+   {
+     width: 0;
+     height: 0;
+     border-top-color:transparent;
+     border-right-color: transparent;
+     border-bottom-color:transparent;
+     border-left-color:#fff;
+   }
+   50%{
+      width: 0;
+      height: 100%;
+      border-top-color: transparent;
+      border-right-color:  transparent;
+      border-bottom-color:#fff;
+      border-left-color:#fff;
+   }
+   100%{
+    width: 100%;
+    height: 100%;
+    border-top-color:transparent;
+    border-right-color: transparent;
+    border-bottom-color: #fff;
+    border-left-color:#fff;
+   }
+ }
+*/
+
+  

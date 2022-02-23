@@ -1,0 +1,134 @@
+figure{
+    padding: 30px;
+    background-color: white;
+    display: inline-block;
+    margin: 20px;
+  }
+  body{
+    width: 100%;
+    height: 100vh;
+    background-image: url(accesorii_img/hp.jpg);
+    background-size:cover;
+    background-position:center; 
+  }
+  .container
+  {   
+      margin-top: 30px;
+      margin-left: 10vw;
+      
+      width: 30vw;
+      display: grid;
+      row-gap: 10px;
+  }
+  .container>figure:nth-child(1){
+    grid-area: Poza1;
+  }
+  .container>figure:nth-child(2){
+    grid-area: Poza2;
+  }
+  .container>figure:nth-child(3){
+    grid-area: Poza3;
+  }
+  .container>figure:nth-child(4){
+    grid-area: Poza4;
+  }
+  .container>figure:nth-child(5)
+  {
+    grid-area: Poza5;
+  }
+  .container>figure:nth-child(6)
+  {
+    grid-area: Poza6;
+  }
+  .container>figure:nth-child(7)
+{
+  grid-area: Poza7;
+}
+.container>figure:nth-child(8)
+{
+  grid-area: Poza8;
+}
+.container figure img
+{
+  width: 20vw;
+}
+.container>figure{
+  border-radius: 20px;
+    animation-name: aparitie;
+    animation-duration:3.5s;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+    animation-fill-mode: both; 
+  }
+  .container>figure:nth-child(1),.container>figure:nth-child(6){
+    animation-delay:0.5s;
+  }
+  .container>figure:nth-child(2),.container>figure:nth-child(7){
+    animation-delay:1.0s;
+  }
+  .container>figure:nth-child(3),.container>figure:nth-child(8){
+    animation-delay:1.5s;
+  }
+  .container>figure:nth-child(4){
+    animation-delay:2.0s;
+  }
+  .container>figure:nth-child(5){
+    animation-delay:2.5s;
+  }
+  @keyframes aparitie{
+    0%{opacity:0;}
+    100%{opacity:1;}
+   }
+   .container>figure:hover {
+    position: relative;
+    z-index: 10;
+    transition: transform 1.3s;
+    transform: scale(1.25);
+  }
+  .pret{
+    color: antiquewhite;
+    font-size: 230px;
+  }
+  footer{
+    position: static;
+    height: 100px;
+    width: 100%;
+    background-color: rgb(39, 43, 41) ;
+  }
+  @media screen and (max-width:1400px) and (min-width:700px) {
+    .container{
+      grid-template-columns: auto auto auto ;
+      grid-template-areas:" Poza1 Poza2 Poza3" "Poza4 Poza5 Poza6" "Poza7 Poza8 Poza9";
+      row-gap: 60px;
+      margin-left: 7vw;
+    }
+      .container figure img
+      {
+        width: 17vw;
+      }
+    
+  }
+  @media screen and (min-width:1400px) {
+  .container{
+          grid-template-columns: auto auto auto auto;
+          grid-template-areas:" Poza1 Poza2 Poza3 Poza4" "Poza5 Poza6 Poza7 Poza8";
+          row-gap: 80px;
+    }
+    .container figure img
+      {
+        width: 15vw;
+      }
+    
+  }
+  @media screen and (max-width:700px) {
+  .container{
+    grid-template-columns: auto auto ;
+    grid-template-areas:" Poza1 Poza2" "Poza3 Poza4" "Poza5 Poza6" "Poza7 Poza8";
+    row-gap: 40px;}
+    
+  }
+  .oo{
+    overflow: hidden;
+    top:400px;
+    height: 3000px;
+  }
